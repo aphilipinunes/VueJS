@@ -1,0 +1,293 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.post-two {
+   height: 304px;
+   width: 25%;
+   @include box-shadow(-8px, 2px, 30px -8px, rgba(0, 0, 0, 0.39));
+   background-image: url(../../assets/images/background-post-2.jpg);
+   background-size: 100%;
+   margin-top: 22px;
+
+   @media (max-width: 1055px) {
+      width: 27.5%;
+      height: 262px;
+      margin-top: 17px;
+   }
+
+   @media (max-width: 980px) {
+      width: 48.5%;
+      margin-top: 14px;
+   }
+
+
+   @media (max-width: 470px) {
+      background-size: 124%;
+      background-position: top center;
+   }
+
+
+   @media (max-width: 390px) {
+      background-size: 144%;
+      background-position: top center;
+   }
+
+
+   .content {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      .title,
+      .description {
+         position: relative;
+         z-index: 1;
+      }
+
+      .title {
+         color: $color-primary;
+         font-size: 0.919rem;
+         font-weight: 500;
+         position: absolute;
+         bottom: 52px;
+         left: 10px;
+         z-index: 9;
+         text-align: left;
+         font-weight: bold;
+         text-transform: uppercase;
+
+         @media (max-width: 1400px) {
+            bottom: 65px;
+         }
+
+         @media (max-width: 1205px) {
+            bottom: 92px;
+         }
+
+
+         @media (max-width: 1055px) {
+            bottom: 78px;
+            font-size: 0.839rem;
+         }
+
+         @media (max-width: 540px) {
+            display: none;
+         }
+
+         span {
+            font-size: 1.288rem;
+            font-family: $roboto-black;
+            display: block;
+            color: white;
+            line-height: 19px;
+
+            @media (max-width: 1055px) {
+
+               font-size: 1.188rem;
+            }
+         }
+      }
+
+      .description {
+         z-index: 9;
+         position: absolute;
+         bottom: 15px;
+         right: 12px;
+         width: 146px;
+         text-align: left;
+
+         @media (max-width: 510px) {
+            bottom: 11px;
+            width: 85%;
+         }
+
+         @media (max-width: 390px) {
+            width: 84%;
+         }
+
+         p {
+            font-size: 0.67rem;
+            line-height: 14px;
+            margin-bottom: 6px;
+         }
+      }
+
+
+      .content-bgs {
+         position: relative;
+         width: 450px;
+         height: 304px;
+         z-index: 0;
+
+         .bg-blue {
+            height: 89%;
+            width: 446%;
+            position: absolute;
+            bottom: 10%;
+            left: -37%;
+            background: $color-primary;
+            @include rotate(-20);
+
+
+            @media (max-width: 1400px) {
+               bottom: 15%;
+            }
+
+            @media (max-width: 1205px) {
+               bottom: 22%;
+            }
+
+            @media (max-width: 1055px) {
+               bottom: 35%;
+            }
+
+            @media (max-width: 540px) {
+               @include rotate(-12);
+               bottom: 3%;
+            }
+
+            @media (max-width: 410px) {
+               bottom: 11%;
+            }
+
+         }
+
+
+
+         .border-yellow {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: $color-secondary;
+            transform: rotate(-19.8deg);
+            top: 45.9%;
+            right: -24.5%;
+
+            @media (max-width: 1400px) {
+               top: 40%;
+               right: -24.9%;
+            }
+
+            @media (max-width: 1205px) {
+               top: 33%;
+            }
+
+            @media (max-width: 1055px) {
+               top: 24%;
+
+               right: -19.9%;
+            }
+
+            @media (max-width: 540px) {
+               top: 40%;
+               right: 8.1%;
+               @include rotate(-12);
+            }
+
+            @media (max-width: 410px) {
+               top: 33%;
+            }
+
+
+         }
+
+         .border-yellow-2 {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: $color-secondary;
+            transform: rotate(21deg);
+            top: 44.52%;
+            left: -68.5%;
+
+            @media (max-width: 1400px) {
+               top: 38.52%;
+               left: -68.4%;
+            }
+
+            @media (max-width: 1205px) {
+               top: 31.52%;
+            }
+
+            @media (max-width: 1055px) {
+               top: 22.52%;
+               left: -73.4%;
+            }
+
+            @media (max-width: 540px) {
+               display: none;
+            }
+
+
+         }
+
+
+         .border-yellow-3 {
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background-color: $color-secondary;
+            transform: rotate(-20deg);
+            top: 70.5%;
+            left: -15%;
+
+            @media (max-width: 1400px) {
+               top: 65.5%;
+            }
+
+            @media (max-width: 1205px) {
+               top: 57.5%;
+            }
+
+            @media (max-width: 1055px) {
+               top: 45.5%;
+            }
+
+            @media (max-width: 980px) {
+               top: 45.8%;
+            }
+
+            @media (max-width: 540px) {
+               @include rotate(-12);
+
+            }
+
+            @media (max-width: 410px) {
+               top: 37.8%;
+            }
+
+         }
+
+
+         .bg-triangle {
+            top: 177px;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 50px 0 47px 132px;
+            border-color: transparent transparent transparent $color-secondary;
+
+            @media (max-width: 1400px) {
+               top: 160px;
+            }
+
+            @media (max-width: 1205px) {
+               top: 137px;
+            }
+
+            @media (max-width: 1055px) {
+               top: 119px;
+            }
+
+            @media (max-width: 540px) {
+               display: none;
+            }
+         }
+
+      }
+
+   }
+
+}

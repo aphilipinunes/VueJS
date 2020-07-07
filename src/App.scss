@@ -1,0 +1,87 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+html {
+
+    font-family: $roboto;
+    color: white;
+    background: $color-primary;
+
+    body {
+        margin: 0;
+    }
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    position: relative;
+
+    @media (max-width: 1055px) {
+        height: 770px;
+    }
+
+    @media (max-width: 980px) {
+        height: auto;
+    }
+
+    .bg-yellow {
+        background-color: $color-secondary;
+        height: 600%;
+        width: 380%;
+        position: fixed;
+        z-index: 0;
+        top: -29%;
+        left: -23%;
+        @include rotate(-31);
+        overflow: hidden;
+
+        @media (max-width: 1320px) {
+            top: -9%;
+        }
+
+        @media (max-width: 1120px) {
+            top: 18%;
+        }
+
+        @media (max-width: 980px) {
+            top: 47%;
+        }
+
+        @media (max-width: 600px) {
+            top: 34%;
+            left: 34%;
+        }
+
+
+        @media (max-width: 480px) {
+            top: -5%;
+            left: 102%;
+        }
+
+
+
+        @media (max-width: 400px) {
+            top: 0%;
+            left: 202%;
+        }
+
+
+    }
+}
+
+p {
+    font-size: 0.813rem;
+    line-height: 18px;
+    font-weight: 300;
+}

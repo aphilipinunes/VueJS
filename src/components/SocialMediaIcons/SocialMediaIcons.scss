@@ -1,0 +1,20 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.icons {
+    @include flexbox();
+
+    &.small-icons{
+        img{
+            height: 13px;
+        }
+    }
+
+    img {
+        height: 16px;
+        &+ img{
+            margin-left: 15px;
+        }
+    }
+}
+

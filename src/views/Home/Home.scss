@@ -1,0 +1,44 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.home {
+    text-align: center;
+    width: 100%;
+    height: 812px;
+    max-width: 1330px;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 1055px) {
+        height: 665px;
+    }
+
+    @media (max-width: 980px) {
+        max-width: 600px;
+        height: inherit;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        margin: 30px 0;
+    }
+
+    .container {
+        height: 90%;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        padding: 0 25px;
+
+        @media (min-width: 980px) {
+            @include flex-flow(column wrap);
+        }
+
+        @media (max-width: 980px) {
+            @include justify-content(space-between);
+        }
+
+    }
+
+
+}
