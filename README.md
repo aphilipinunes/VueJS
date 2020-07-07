@@ -1,4 +1,5 @@
 # front-test
+Desenvolvimento de projeto com duas cores customizáveis (variables.scss) afetando todo o projeto, além da responsividade e reutilização e criação de componentes
 
 ## Project setup
 ```
